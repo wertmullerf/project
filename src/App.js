@@ -1,10 +1,14 @@
-import NavBar from './components/NavBar';
-
+import React from "react";
+import NavBarBootstrap from './components/NavBarBootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemListContainer from "./components/ItemListContainer";
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <NavBarBootstrap/>
+      <ItemListContainer msg={'Bienvenidos a mi tienda online!'}/>
     </div>
+
   );
 }
 
