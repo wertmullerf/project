@@ -11,7 +11,7 @@ function HeroSection() {
         </video>
         <strong>subscribe and save 10%</strong>
         <h3>Flavors from Around the World</h3>
-        <ButtonHero/>
+        <ButtonHero msg="Shop now"/>
     </section>
   )
 }

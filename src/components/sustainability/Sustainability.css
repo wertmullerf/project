@@ -1,5 +1,5 @@
 .freatures{
-    height: 80vh;
+    height: 160vh;
     background-color: #0a0b0a;
     display: flex;
     align-items:center;
@@ -15,7 +15,7 @@
 .freatures p{
     font-weight: 400;
     color: #ffff;
-    width: 50%;
+    width: 35%;
     margin-top: 1rem;
     text-align: center;
 }
