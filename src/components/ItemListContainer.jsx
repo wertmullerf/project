@@ -5,4 +5,3 @@ export default function ItemListContainer({msg}) {
     <p className='h1 h-100 d-flex justify-content-center'>{msg}</p>
   )
 }
-

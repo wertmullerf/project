@@ -1,12 +1,16 @@
 import React from "react";
 import NavBarBootstrap from './components/NavBarBootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from "./components/ItemListContainer";
+// import ItemListContainer from "./components/ItemListContainer";
+import HeroSection from "./components/HeroSection";
+import './App.css'
+import Sustainability from "./components/sustainability/Sustainability";
 function App() {
   return (
     <div className="App">
       <NavBarBootstrap/>
-      <ItemListContainer msg={'Bienvenidos a mi tienda online!'}/>
+      {/* <ItemListContainer msg={'Bienvenidos a mi tienda online!'}/> */}
+      <HeroSection/>
+      <Sustainability/>
     </div>
 
   );

@@ -1,26 +1,27 @@
 import CartWidget from "./CartWidget"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, Container} from 'react-bootstrap';
+import logo from '../images/logo.png'
+import './NavBarBootstrap.css'
 function NavBarBootstrap(){
     return(
-        <Navbar bg="dark" variant ="dark"expand="lg">
+        <Navbar className="nav" bg="dark" variant ="dark"expand="lg">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <img className ="logo" src={logo} alt="Cafenetic logo" />
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto linkNav">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Hoodies</Nav.Link>
                         <Nav.Link href="#link">Coming In</Nav.Link>
                         <Nav.Link href="#link">Be Yours</Nav.Link>
                     </Nav>
                     <div>
-                        <CartWidget number="3"/>
+                        <CartWidget number={3}/>
                     </div>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
-        
+        </Navbar>        
     )
 }
+
 export default NavBarBootstrap
