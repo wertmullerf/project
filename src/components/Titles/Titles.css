@@ -1,20 +1,16 @@
-.freatures{
-    height: 120vh;
+.title{
     display: flex;
-    align-items:center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.freatures strong{
+.title strong{
     font-size: 2.5rem;
     color: #ffff;
     font-weight: 500;
-    margin-top: 3em;
 }
-.freatures p{
+.title p{
     font-weight: 400;
     color: #ffff;
-    width: 35%;
     margin-top: 1rem;
-    text-align: center;
 }

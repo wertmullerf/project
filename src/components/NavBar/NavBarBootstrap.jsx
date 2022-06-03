@@ -1,6 +1,6 @@
-import CartWidget from "./CartWidget"
+import CartWidget from "../CartWidget/CartWidget"
 import {Navbar, Nav, Container} from 'react-bootstrap';
-import logo from '../images/logo.png'
+import logo from '../../images/logo.png'
 import './NavBarBootstrap.css'
 function NavBarBootstrap(){
     return(
