@@ -9,6 +9,7 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +20,6 @@ function App() {
       <Sustainability/>
       <ProductsFirstShow/>
       <ItemListContainer/>
-
     </div>
 
   );

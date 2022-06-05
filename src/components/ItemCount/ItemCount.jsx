@@ -19,6 +19,7 @@ function ItemCount({stock, initial, onAdd}) {
                 <button className = "btn btn-success"onClick={() =>{onAdd(contador); reset()}}>Agregar al carrito</button>
             </div>
         </>
+        
   )
 }
 
