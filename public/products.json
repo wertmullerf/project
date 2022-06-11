@@ -1,0 +1,58 @@
+[
+	{
+		"id": 1,
+		"name": "Classic beans",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 50,
+		"img": "https://i.ibb.co/qnNNsqg/first-Product.png",
+		"stock": 30
+	},
+	{
+		"id": 2,
+		"name": "Heavy beans",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 45,
+		"img": "https://i.ibb.co/ZxmFx0g/second-Product.png",
+		"stock": 5
+	},
+	{
+		"id": 3,
+		"name": "Sweet beans",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 20,
+		"img": "https://i.ibb.co/YbyNdH0/third-Product.png",
+		"stock": 10
+	},
+	{
+		"id": 4,
+		"name": "Light beans",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 30,
+		"img": "https://i.ibb.co/YbyNdH0/third-Product.png",
+		"stock": 3
+	},
+	{
+		"id": 5,
+		"name": "Cafenetic giftcard",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 25,
+		"img": "https://i.ibb.co/xMcbK2k/giftCard.png",
+		"stock": 600
+	},
+	{
+		"id": 6,
+		"name": "Heavy beans",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 45,
+		"img": "https://i.ibb.co/ZxmFx0g/second-Product.png",
+		"stock": 5
+	},
+	{
+		"id": 7,
+		"name": "Cafenetic giftcard V2",
+		"description": "Is simply dummy text of the printing and typesetting industry.",
+		"price": 50,
+		"img": "https://i.ibb.co/hdQnK8t/second-Gift-Card.png",
+		"stock": 700
+	}
+]
