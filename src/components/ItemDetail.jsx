@@ -1,9 +1,9 @@
 import React from "react";
 import "./ItemDetail.css";
-export default function ItemDetail({ productShown }) {
+export default function ItemDetail({ productDetail }) {
 	return (
 		<div>
-			{productShown?.map((product) => {
+			{productDetail?.map((product) => {
 				return (
 					<div className="productDetailShown container">
 						<div className="productDetailText">

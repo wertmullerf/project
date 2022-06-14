@@ -1,27 +1,33 @@
-import React from "react";
-// import ItemListContainer from "./components/ItemListContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import HeroSection from "./components/HeroSection/HeroSection";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBarBootstrap from "./components/NavBar/NavBarBootstrap";
-import ProductsFirstShow from "./components/ProductsFirstShow/ProductsFirstShow";
-import Sustainability from "./components/Sustainability/Sustainability";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TestEventos from "./components/TestEventos";
+import Contact from "./pages/Contact";
+import ErrorPage from "./pages/ErrorPage";
+import Home from "./pages/Home";
+import Journal from "./pages/Journal";
+import Products from "./pages/Products";
 
 function App() {
 	return (
-		// <BrowserRouter>
-		//   <Routes>
-		//     <Route path="/" element={<NavBarBootstrap />} />
-		//   </Routes>
-		// </BrowserRouter>
 		<div className="App">
-			<NavBarBootstrap />
-			{/* <ItemListContainer msg={'Bienvenidos a mi tienda online!'}/> */}
-			<HeroSection />
-			<Sustainability />
-			<ProductsFirstShow />
-			<ItemListContainer />
+			<BrowserRouter>
+				<NavBarBootstrap />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/shop" element={<Products />} />
+					<Route path="/item/:id" element={<ItemDetailContainer />} />
+					<Route
+						path="/shop/:categoryId"
+						element={<ItemListContainer />}
+					/>
+					<Route path="/journal" element={<Journal />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="*" element={<ErrorPage />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }

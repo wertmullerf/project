@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-
 function ItemDetailContainer() {
 	const [productDetail, setProductDetail] = useState();
-	const productShown = productDetail?.filter((product) => product.id === 1);
+	const { id } = useParams();
 
 	useEffect(() => {
 		const getDetail = () => {
-			fetch("./products.json")
+			fetch("products.json")
 				.then((res) => res.json())
 				.then((data) => {
-					setProductDetail(data);
-					console.log(data);
+					setProductDetail(data.find((product) => product.id === id));
 				})
 				.catch((err) => console.log(err));
 		};
-		setTimeout(() => {
-			//MINI DELAY PARA QUE PAREZCA MAS REAL
-			getDetail();
-		}, 3500);
-	}, []);
-
+		getDetail();
+	}, [id]);
 	return (
 		<div>
-			<ItemDetail productShown={productShown} />
+			<ItemDetail productDetail={productDetail} />
 		</div>
 	);
 }
