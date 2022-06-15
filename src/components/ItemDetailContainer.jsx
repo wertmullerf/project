@@ -3,22 +3,30 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 function ItemDetailContainer() {
 	const [productDetail, setProductDetail] = useState();
-	const { id } = useParams();
+	const { idProducto } = useParams();
 
 	useEffect(() => {
 		const getDetail = () => {
-			fetch("products.json")
+			fetch("../../products.json")
 				.then((res) => res.json())
-				.then((data) => {
-					setProductDetail(data.find((product) => product.id === id));
+				.then((productos) => {
+					setProductDetail(
+						productos.find((producto) => producto.id === idProducto)
+					);
+					console.log(productDetail);
 				})
 				.catch((err) => console.log(err));
+			console.log(productDetail);
 		};
 		getDetail();
-	}, [id]);
+	}, [idProducto]);
 	return (
 		<div>
-			<ItemDetail productDetail={productDetail} />
+			{productDetail ? (
+				<ItemDetail productDetail={productDetail} />
+			) : (
+				<div>Loading...</div>
+			)}
 		</div>
 	);
 }

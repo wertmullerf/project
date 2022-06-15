@@ -1,13 +1,11 @@
 // import ItemCount from '../ItemCount/ItemCount';
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import ItemDetailContainer from "../ItemDetailContainer";
 import ItemList from "../ItemList";
 import "./ItemListContainer.css";
-
 const coffeesList = [
 	{
-		id: 0,
+		id: "0",
 		name: "Classic beans",
 		category: "coffee",
 		description:
@@ -17,7 +15,7 @@ const coffeesList = [
 		stock: 30,
 	},
 	{
-		id: 1,
+		id: "1",
 		name: "Heavy beans",
 		category: "coldbrew",
 		description:
@@ -27,7 +25,7 @@ const coffeesList = [
 		stock: 5,
 	},
 	{
-		id: 2,
+		id: "2",
 		name: "Sweet beans",
 		category: "decaf",
 		description:
@@ -37,7 +35,7 @@ const coffeesList = [
 		stock: 10,
 	},
 	{
-		id: 3,
+		id: "3",
 		name: "Light beans",
 		category: "decaf ",
 		description:
@@ -47,7 +45,7 @@ const coffeesList = [
 		stock: 3,
 	},
 	{
-		id: 4,
+		id: "4",
 		name: "Cafenetic giftcard",
 		category: "gifs",
 		description:
@@ -57,7 +55,7 @@ const coffeesList = [
 		stock: 600,
 	},
 	{
-		id: 5,
+		id: "5",
 		name: "Heavy beans",
 		category: "gifs ",
 		description:
@@ -67,7 +65,7 @@ const coffeesList = [
 		stock: 5,
 	},
 	{
-		id: 6,
+		id: "6",
 		name: "Cafenetic giftcard V2",
 		category: "gifs",
 		description:
@@ -77,7 +75,7 @@ const coffeesList = [
 		stock: 700,
 	},
 	{
-		id: 7,
+		id: "7",
 		name: "Cafenetic giftcard V2",
 		category: "gifs",
 		description:
@@ -114,27 +112,27 @@ export default function ItemListContainer() {
 				console.log(error);
 			});
 	}, [categoryId]);
-	console.log(resultado);
+
 	return (
 		<div className="productsPage">
 			<h6 className="shopTitle">Shop</h6>
 			<div className="categories">
-				{categories.map((category, index) => {
-					return (
-						<li key={index}>
-							<Link
-								className="linkCategory"
-								to={`/shop/${category}`}
-							>
-								{category}
-							</Link>
-						</li>
-					);
-				})}
+				{categories &&
+					categories?.map((category, index) => {
+						return (
+							<li key={index}>
+								<Link
+									className="linkCategory"
+									to={`/shop/${category}`}
+								>
+									{category}
+								</Link>
+							</li>
+						);
+					})}
 			</div>
 
 			<ItemList items={items} />
-			<ItemDetailContainer />
 		</div>
 	);
 }
